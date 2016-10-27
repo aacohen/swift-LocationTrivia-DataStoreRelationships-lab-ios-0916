@@ -9,6 +9,8 @@
 import UIKit
 
 class AddLocationViewController: UIViewController {
+    
+    var location: Location = Location ()
 
     @IBOutlet weak var longitudeLabel: UITextField!
     @IBOutlet weak var latitudeLabel: UITextField!

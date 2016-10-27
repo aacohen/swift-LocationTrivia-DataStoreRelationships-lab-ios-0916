@@ -9,12 +9,13 @@
 import UIKit
 
 class AddTriviaViewController: UIViewController {
+    
+    var location: Location = Location()
 
     @IBAction func saveButton(_ sender: AnyObject) {
         let newTrivia = Trivium(content: triviaTextField.text!, likes: 0)
         
-    
-        
+        self.location.trivia.append(newTrivia)
         
         
         dismiss(animated: true, completion: nil)

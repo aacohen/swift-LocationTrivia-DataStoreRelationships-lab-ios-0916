@@ -33,6 +33,10 @@ class TriviaTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,6 +60,13 @@ class TriviaTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addTriviaSegue" {
+            let destVC = segue.destination as! AddTriviaViewController
+            
+                destVC.location = self.location
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
