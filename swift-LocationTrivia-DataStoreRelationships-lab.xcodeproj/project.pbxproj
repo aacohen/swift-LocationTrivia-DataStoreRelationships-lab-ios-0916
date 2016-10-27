@@ -18,6 +18,7 @@
 		F356C3DF1DC1262C00550107 /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356C3DE1DC1262C00550107 /* LocationsTableViewController.swift */; };
 		F356C3E11DC127C900550107 /* TriviaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356C3E01DC127C900550107 /* TriviaTableViewController.swift */; };
 		F356C3E31DC1389600550107 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F356C3E21DC1389600550107 /* AddLocationViewController.swift */; };
+		F3FB329C1DC19EE000CAC29D /* AddTriviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FB329B1DC19EE000CAC29D /* AddTriviaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F356C3DE1DC1262C00550107 /* LocationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
 		F356C3E01DC127C900550107 /* TriviaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaTableViewController.swift; sourceTree = "<group>"; };
 		F356C3E21DC1389600550107 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		F3FB329B1DC19EE000CAC29D /* AddTriviaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTriviaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				1B4006C01D25974A008F814D /* Assets.xcassets */,
 				1B4006C21D25974A008F814D /* LaunchScreen.storyboard */,
 				F356C3DA1DC1251B00550107 /* Main.storyboard */,
+				F3FB329B1DC19EE000CAC29D /* AddTriviaViewController.swift */,
 				F356C3E01DC127C900550107 /* TriviaTableViewController.swift */,
 				F356C3E21DC1389600550107 /* AddLocationViewController.swift */,
 				1B4006C51D25974A008F814D /* Info.plist */,
@@ -246,6 +249,7 @@
 				1B4006DC1D259895008F814D /* Location.swift in Sources */,
 				F356C3D91DC122CB00550107 /* LocationsDataStore.swift in Sources */,
 				1B4006BA1D25974A008F814D /* AppDelegate.swift in Sources */,
+				F3FB329C1DC19EE000CAC29D /* AddTriviaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

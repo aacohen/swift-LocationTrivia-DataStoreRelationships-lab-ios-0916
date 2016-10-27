@@ -1,5 +1,5 @@
 //
-//  AddLocationViewController.swift
+//  AddTriviaViewController.swift
 //  swift-LocationTrivia-DataStoreRelationships-lab
 //
 //  Created by Ariela Cohen on 10/26/16.
@@ -8,29 +8,30 @@
 
 import UIKit
 
-class AddLocationViewController: UIViewController {
+class AddTriviaViewController: UIViewController {
 
-    @IBOutlet weak var longitudeLabel: UITextField!
-    @IBOutlet weak var latitudeLabel: UITextField!
-    @IBOutlet weak var nameLabel: UITextField!
-    @IBOutlet weak var saveButtonOutlet: UIButton!
-    @IBOutlet weak var cancelButtonOutlet: UIButton!
-    @IBAction func cancelButtonAction(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
-
-    }
-    @IBAction func saveButtonAction(_ sender: AnyObject) {
-       let newLocation = Location(name: nameLabel.text!, latitude: Float(latitudeLabel.text!)!, longitude: Float(longitudeLabel.text!)!)
-       LocationDataStore.sharedInstance.locations.append(newLocation)
+    @IBAction func saveButton(_ sender: AnyObject) {
+        let newTrivia = Trivium(content: triviaTextField.text!, likes: 0)
+        
+    
+        
         
         
         dismiss(animated: true, completion: nil)
 
     }
+    @IBAction func cancelButton(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBOutlet weak var triviaTextField: UITextField!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "addTriviaButton"
         
-
         // Do any additional setup after loading the view.
     }
 
@@ -51,4 +52,3 @@ class AddLocationViewController: UIViewController {
     */
 
 }
-

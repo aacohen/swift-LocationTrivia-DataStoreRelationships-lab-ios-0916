@@ -99,6 +99,15 @@
                             <outlet property="delegate" destination="r0H-OQ-t4J" id="ANa-yq-9iQ"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YvL-7m-lK6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9k5-Q5-6lA">
+                            <connections>
+                                <segue destination="GbS-m0-1jl" kind="modal" identifier="addTriviaSegue" id="aT9-SY-0fs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yu5-Dc-PEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,25 +149,87 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4P-qp-1Qi">
-                                <frame key="frameInset" minX="279" minY="348" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="saveButton" label="saveButton"/>
-                                <state key="normal" title="Save"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmY-p6-vRF">
                                 <frame key="frameInset" minX="54" minY="348" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="cancelButton" label="cancelButton"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonAction:" destination="dl3-HH-gFD" eventType="touchUpInside" id="dIj-9Q-J6J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4P-qp-1Qi">
+                                <frame key="frameInset" minX="277" minY="348" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="saveButton" label="saveButton"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="dl3-HH-gFD" eventType="touchUpInside" id="UDJ-qU-Efi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelButtonOutlet" destination="CmY-p6-vRF" id="yNa-dm-Khg"/>
+                        <outlet property="latitudeLabel" destination="miQ-1r-Lw8" id="W0M-l4-Tzg"/>
+                        <outlet property="longitudeLabel" destination="0z2-TI-9Kn" id="2mG-ui-VLP"/>
+                        <outlet property="nameLabel" destination="K9A-Il-daM" id="txB-NV-fGm"/>
+                        <outlet property="saveButtonOutlet" destination="g4P-qp-1Qi" id="SeE-eN-KCI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRI-lR-rj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2252" y="112.89355322338831"/>
+        </scene>
+        <!--Add Trivia View Controller-->
+        <scene sceneID="a1l-9a-hVL">
+            <objects>
+                <viewController id="GbS-m0-1jl" customClass="AddTriviaViewController" customModule="swift_LocationTrivia_DataStoreRelationships_lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ykl-Ne-CVL"/>
+                        <viewControllerLayoutGuide type="bottom" id="gEm-Ma-ACS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gdw-cK-5qf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Triva" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLm-Ti-OTl">
+                                <frame key="frameInset" minX="91" minY="127" width="208" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Trivium Text Field" label="Trivium Text Field"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqA-xn-vfI">
+                                <frame key="frameInset" minX="66" minY="300" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Cancel Button" label="Cancel Button"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="GbS-m0-1jl" eventType="touchUpInside" id="xgX-ly-bjP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJh-1f-RGF">
+                                <frame key="frameInset" minX="276" minY="300" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Save Button" label="Save Button"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="GbS-m0-1jl" eventType="touchUpInside" id="FBV-Tx-tnn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="triviaTextField" destination="fLm-Ti-OTl" id="y9B-nY-TiM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iuj-uX-vmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2920.8000000000002" y="112.89355322338831"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1nZ-hV-oUS">

@@ -19,8 +19,12 @@ class LocationsTableViewController: UITableViewController {
         self.tableView.accessibilityIdentifier = "Locations Table"
         self.navigationItem.rightBarButtonItem?.accessibilityLabel = "addButton"
         self.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "addButton"
+      
         
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
